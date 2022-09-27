@@ -35,20 +35,7 @@
       </div>
 
       <div id="footer">
-        <div id="footer-images">
-          <div class="footer-block">
-            <img src="img/footer1.jpg" />
-          </div>
-          <div class="footer-block">
-            <img src="img/footer2.jpg" />
-          </div>
-          <div class="footer-block">
-            <img src="img/footer3.jpg" />
-          </div>
-          <div class="footer-block">
-            <img src="img/footer4.jpg" />
-          </div>
-        </div>
+        <?php print instagramFeed(); ?>
       </div>
       
     </div> <!-- /page -->
