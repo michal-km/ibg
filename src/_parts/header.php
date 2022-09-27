@@ -4,7 +4,7 @@
           <a href="#menu"><img src="img/hamburger.svg" /> <span>Menu</span></a>
         </div>
         <div id="header-title">
-          <a href="index.html"><img id="logo" src="img/logo.png"/></a>
+          <a href="index.php"><img id="logo" src="img/logo.png"/></a>
         </div>
         <div id="header-links">
           <ul>
