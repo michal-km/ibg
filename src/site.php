@@ -2,7 +2,8 @@
 function getInstagramFeed() {
   $images = [];
   try {
-    $url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
+    //$url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
+    $url = 'https://preview.wgrygranie.pl/js/instatest.json';
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -25,7 +26,6 @@ function getInstagramFeed() {
     
     $file = curl_exec($ch);
     curl_close($ch);
-    print_r ($file);
     $data = json_decode($file);
     $graphQL = $data->graphql->user->edge_owner_to_timeline_media->edges;
     foreach ($graphQL as $edge) {
