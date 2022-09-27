@@ -7,13 +7,16 @@
 }
 
 #header-bar {
-    position: absolute;
     z-index: 10;
     padding-top: 2em;
     display: flex;
     width: 100%;
     color: #ffffff;
     font-size: 0.9em;
+}
+
+.front #header-bar {
+    position: absolute;
 }
 
 #header-bar a,
@@ -131,10 +134,12 @@
   #header-title {
       text-align: right;
       padding-right: 1em;
+      width: auto;
   }
   #header-hamburger {
       padding-left: 1em;
       top: 1.6em;
+      width: auto;
   }
   #header-hamburger span {
       display: none;
