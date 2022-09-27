@@ -26,7 +26,7 @@ function instagramFeed() {
   print "        <div id=\"footer-images\">\n";
   foreach ($feed as $image) {
     print "          <div class=\"footer-block\">\n";  
-    print "          <a href=\"".$image['link']."\"><img src=\"".$image['image']."\" /></a>\n";  
+    print "          <a href=\"".$image['link']."\"><img src=\"src/_parts/image.php?src=".$image['image']."\" /></a>\n";  
     print "          </div>\n";  
   }
   print "        </div>\n";
