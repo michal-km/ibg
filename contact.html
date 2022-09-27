@@ -37,10 +37,15 @@
       <div id="content" class="row">
         <h1>Contact Us</h1>
         <form method="post" action="src/form.php" id="contactform" enctype="multipart/form-data">
-            <label for="names">Name <sup>*</sup></label>
             <fieldset id="names">
-                <input type="text" id="name" name="name" aria-required="true" />
-                <input type="text" id="surname" name="surname" aria-required="true" />
+                <div>
+                  <label for="name">Name <sup>*</sup></label>
+                  <input type="text" id="name" name="name" aria-required="true" />
+                </div>
+                <div>
+                  <label for="surname">Surname <sup>*</sup></label>
+                  <input type="text" id="surname" name="surname" aria-required="true" />
+                </div>
             </fieldset>
             <label for="email">Email <sup>*</sup></label>
             <input type="email" autocomplete="email" spellcheck="false" id="email" name="email" aria-required="true" />
