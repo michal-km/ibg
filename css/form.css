@@ -2,6 +2,7 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2em;
 }
 
 input,
@@ -17,6 +18,7 @@ textarea {
   box-sizing: border-box;
   border-radius: 2px;
   font-family: 'SemplicitaProSemibold';
+  margin-bottom: 2.3em;
 }
 
 fieldset {
@@ -48,5 +50,9 @@ label {
 @media all and (max-width: 1023px) {
     fieldset {
         display: block;
+    }
+    input,
+    textarea {
+        margin-bottom: 1em;
     }
 }

@@ -27,11 +27,33 @@
   color: #000000;
 }
 
+#contact-data {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4em;
+}
+
+.map h2 {
+  font-size: 1em;
+  text-align: left;
+}
+
+.map p {
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.map iframe {
+  margin-top: 1em;
+}
+
 @media all and (max-width: 768px) {
   #about .row-title {
     margin-left: auto;
   }
   #about h2 {
     text-align: center;
+  }
+  #contact-data {
+    display: block;
   }
 }
