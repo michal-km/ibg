@@ -13,22 +13,7 @@
   </head>
   <body class="jobs not-front">
   
-    <div id="header" class="row">
-      <div id="header-bar">
-        <div id="header-hamburger">
-          <a href="#menu"><img src="img/hamburger.svg" /> <span>Menu</span></a>
-        </div>
-        <div id="header-title">
-          <a href="index.html"><img id="logo" src="img/logo.png"/></a>
-        </div>
-        <div id="header-links">
-          <ul>
-            <li><a class="join-the-team" href="jobs.html">Join the Team</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <?php require_once('src/_parts/header.php'); ?>
     
     <div id="page">
     
@@ -68,17 +53,6 @@
       
     </div> <!-- /page -->
 
-    <div class="hidden">
-      <nav id="menu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Brands</a></li>
-          <li><a href="#">Platforms</a></li>
-          <li><a href="#">Distribution</a></li>
-          <li class="Selected"><a href="jobs.html">Jobs</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <?php require_once('src/_parts/menu.php'); ?>
   </body>
 </html>
