@@ -1,3 +1,6 @@
+<?php
+require_once('src/site.php');
+?>
 <!DOCTYPE html>
 <html>
   <head>
