@@ -43,6 +43,10 @@
     width: 33%;
 }
 
+.not-front #header-title {
+    margin-bottom: 1em;
+}
+
 #header-hamburger {
     padding-left: 4em;
     text-align: left;
