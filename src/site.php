@@ -2,8 +2,14 @@
 function getInstagramFeed() {
   $images = [];
   try {
-    $file = file_get_contents("https://preview.wgrygranie.pl/js/instatest.json"); // https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis
-    //$file = file_get_contents("_parts/image.php?url=".rawurlencode("https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis"));
+    $url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json') );
+    $file = curl_exec($ch);
+    curl_close($ch);
     $data = json_decode($file);
     $graphQL = $data->graphql->user->edge_owner_to_timeline_media->edges;
     foreach ($graphQL as $edge) {

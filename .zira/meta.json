@@ -1,6 +1,6 @@
 {
-    "name": "Site",
-    "path": "/home/michalkm/projekty/upwork/site/onesite/project",
+    "name": "ing",
+    "path": "/home/michalkm/projekty/upwork/site/onesite/ibg",
     "phpcs_enabled": true,
     "phplint_enabled": true,
     "tab_index": -1,
@@ -8,7 +8,7 @@
     ],
     "tabs": [
     ],
-    "time_created": "września 26, 2022 - 19:37:41",
-    "time_modified": "września 26, 2022 - 19:37:41",
+    "time_created": "września 27, 2022 - 19:44:58",
+    "time_modified": "września 27, 2022 - 19:44:58",
     "todo": ""
 }
