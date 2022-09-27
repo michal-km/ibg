@@ -16,7 +16,7 @@ try {
       }
   }
 }
-catch ($e) {
+catch (\Exception $e) {
 }
 $json = json_encode($images);
 print $json;
