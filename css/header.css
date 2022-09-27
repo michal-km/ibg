@@ -86,7 +86,7 @@
 }
 
 .vp-controls-wrapper {
-    display: none;
+    display: none !important;
 }
 
 @media all and (max-width: 1199px)
