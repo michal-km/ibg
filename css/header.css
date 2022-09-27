@@ -85,6 +85,10 @@
     margin-right: 10px;
 }
 
+.vp-controls-wrapper {
+    display: none;
+}
+
 @media all and (max-width: 1199px)
  {
   body {
