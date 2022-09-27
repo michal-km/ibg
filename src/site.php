@@ -2,7 +2,7 @@
 function getInstagramFeed() {
   $images = [];
   try {
-    $file = file_get_contents("https://preview.wgrygranie.pl/js/instatest.json");
+    $file = file_get_contents("https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis");
     $data = json_decode($file);
     $graphQL = $data->graphql->user->edge_owner_to_timeline_media->edges;
     foreach ($graphQL as $edge) {
