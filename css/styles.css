@@ -1,0 +1,65 @@
+@font-face {
+    font-family: SemplicitaProSemibold;
+    src: url('fonts/SemplicitaPro-Semibold.otf');
+  }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-family: 'SemplicitaProSemibold';
+ }
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #81185e
+ }
+
+a:hover {
+ text-decoration: underline;
+}
+
+img
+ {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+ }
+
+p {
+ margin-top: 0em;
+}
+
+h2 {
+  font-size: 2.6666em;
+  text-align: center;
+  margin-bottom:1.5em;
+  margin-top: 2em;
+ }
+
+#page {
+  width: 90%;
+  max-width: 1772px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.row {
+ display: block;
+ clear: both;
+ margin-top: 2em;
+ margin-bottom: 2em;
+}
+
+.hidden
+ {
+  display: none;
+ }
+
+@media all and (max-width: 768px) {
+    h2 {
+        margin-top: 0em;
+        margin-bottom: 1em;
+        font-size: 1.6em;
+    }
+}

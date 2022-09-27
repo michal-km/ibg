@@ -1,0 +1,144 @@
+#header {
+    background: #000000;
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 4em;
+}
+
+#header-bar {
+    position: absolute;
+    z-index: 10;
+    padding-top: 2em;
+    display: flex;
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.9em;
+}
+
+#header-bar a,
+#header-bar a:link,
+#header-bar a:visited
+ {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+ }
+
+ #header-bar a:hover
+  {
+   text-decoration: underline;
+  }
+
+.header-video {
+    width: 100%;
+}
+
+#header-hamburger,
+#header-links,
+#header-title {
+    width: 33%;
+}
+
+#header-hamburger {
+    padding-left: 4em;
+    text-align: left;
+}
+
+#header-links {
+    padding-right: 4em;
+    text-align: right;
+}
+
+#header-links ul,
+#header-links li
+ {
+  list-style: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+ }
+
+#header-links li
+ {
+  margin-left: 2em;
+ }
+
+.join-the-team
+ {
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 2px;
+  padding-right: 15px;
+  padding-left: 15px;
+ }
+
+#logo
+ {
+  width: auto;
+ }
+
+#header-hamburger img {
+    width: 24px;
+    height: 24px;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+@media all and (max-width: 1199px)
+ {
+  body {
+      font-size: 16px;
+  }
+  #header-bar {
+      display: block;
+  }
+  #header-hamburger,
+  #header-links,
+  #header-title {
+      width: 100%;
+  }
+  #header-hamburger {
+      position: absolute;
+  }
+  #header-links {
+      text-align: center;
+      padding: 0px;
+      display: none;
+  }
+  #header-links li {
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+  #logo {
+      margin-bottom: 0.5em;
+  }
+ }
+
+@media all and (max-width: 768px)
+ {
+  #header {
+      margin-bottom: 0em;
+  }
+  #header-bar {
+      position: relative;
+      padding-bottom: 0.5em;
+  }
+  #header-title {
+      text-align: right;
+      padding-right: 1em;
+  }
+  #header-hamburger {
+      padding-left: 1em;
+      top: 1.6em;
+  }
+  #header-hamburger span {
+      display: none;
+  }
+  #logo {
+      width: 250px;
+  }
+  .grid.content-grid {
+      display: block;
+  }
+ }

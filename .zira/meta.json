@@ -1,0 +1,14 @@
+{
+    "name": "Site",
+    "path": "/home/michalkm/projekty/upwork/site/onesite/project",
+    "phpcs_enabled": true,
+    "phplint_enabled": true,
+    "tab_index": -1,
+    "tab_lines": [
+    ],
+    "tabs": [
+    ],
+    "time_created": "września 26, 2022 - 19:37:41",
+    "time_modified": "września 26, 2022 - 19:37:41",
+    "todo": ""
+}

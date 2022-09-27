@@ -1,0 +1,37 @@
+#about .row-title {
+  margin-left: 22%;
+}
+
+#about h2 {
+  text-align: left;
+  margin-top: 0em;
+}
+
+#brands .row.odd {
+  margin-bottom: 5vw;
+}
+
+#instagram h2 {
+  margin-bottom: 0px;
+}
+
+#instagram .social-link {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 2em;
+}
+
+#instagram .social-link a,
+#instagram .social-link a:link,
+#instagram .social-link a:visited {
+  color: #000000;
+}
+
+@media all and (max-width: 768px) {
+  #about .row-title {
+    margin-left: auto;
+  }
+  #about h2 {
+    text-align: center;
+  }
+}
