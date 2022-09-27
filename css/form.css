@@ -1,0 +1,40 @@
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0 4px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  color: #000;
+  font-size: 12px;
+  line-height: normal;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-family: 'SemplicitaProSemibold';
+}
+
+fieldset {
+    border: none;
+    padding: 0px;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr;
+}
+
+label {
+    color: #808080;
+}
+
+.submit {
+    border-width: 2px;
+    border-style: solid;
+    width: auto;
+    min-width: 8em;
+    cursor: pointer;
+    transition: 0.1s background-color linear, 0.1s color linear;
+}
+
+.submit:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
