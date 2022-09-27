@@ -10,6 +10,7 @@ function getInstagramFeed() {
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json') );
     $file = curl_exec($ch);
     curl_close($ch);
+    print_r ($file);
     $data = json_decode($file);
     $graphQL = $data->graphql->user->edge_owner_to_timeline_media->edges;
     foreach ($graphQL as $edge) {
