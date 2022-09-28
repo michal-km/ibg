@@ -10,6 +10,7 @@ use IBG\Controllers\FrontendController;
 
 require __DIR__ . '/vendor/autoload.php';
 
+session_start();
 $app = AppFactory::create();
 $twig = Twig::create('templates', ['cache' => false]);
 $app->addRoutingMiddleware();
@@ -59,8 +60,14 @@ $app->get('/distribution', function (Request $request, Response $response, $args
 });
 
 $app->post('/send-message', function (Request $request, Response $response, $args) {
+  $params = (array)$request->getParsedBody();
   $controller = FrontendController::getInstance();
-  return $controller->formProcessorPage($request, $response, $args);
+  return $controller->formProcessorPage($request, $response, $params);
+});
+
+$app->get('/message-sent', function (Request $request, Response $response, $args) {
+  $controller = FrontendController::getInstance();
+  return $controller->getMessageSentPage($request, $response, $args);
 });
 
 $app->run();

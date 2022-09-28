@@ -11,6 +11,8 @@ class FrontendController extends Controller {
 
   protected function getVariables() {
     $variables = [];
+    $variables['messages'] = $_SESSION['site_messages'];
+    $_SESSION['site_messages'] = [];
     $variables['instagram'] = [
       'feed' => InstagramController::getInstance()->getFeed(),
     ];
@@ -77,14 +79,30 @@ class FrontendController extends Controller {
     return $view->render($response, 'distribution.html.twig', $variables);
   }
 
-  public function formProcessorPage(Request $request, Response $response, $args) {
+  public function formProcessorPage(Request $request, Response $response, $params) {
+    $formController = ContactFormController::getInstance();
+    try {
+      $formController->sendMessage($params);
+      return $response
+        ->withHeader('Location', 'message-sent')
+        ->withStatus(302);
+    }
+    catch (\Exception $e) {
+      return $response
+      ->withHeader('Location', 'contact')
+      ->withStatus(302);
+    }
+  }
+
+  public function getMessageSentPage(Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
     $variables = $this->getVariables();
     $variables['page'] = [
-      'title'   => 'International Beauty Group',
-      'classes' => 'not-front thank-you',
+      'title'       => 'International Beauty Group - Message Sent',
+      'description' => '',
+      'classes'     => 'not-front message-sent',
     ];
-    return $view->render($response, 'thank-you.html.twig', $variables);
+    return $view->render($response, 'message-sent.html.twig', $variables);
   }
   
 }

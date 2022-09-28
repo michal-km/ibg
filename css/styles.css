@@ -72,6 +72,13 @@ h2 {
   display: none;
  }
 
+ul.system-messages {
+  background: #a9a9a9;
+  color: #ffffff;
+  padding: 0.5em;
+  list-style-type: none;
+}
+
 @media all and (max-width: 768px) {
     h2 {
         margin-top: 0em;

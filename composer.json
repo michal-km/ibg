@@ -7,6 +7,11 @@
       "email": "michal.kazmierczak@oldwestenterprises.pl"
     }
   ],
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
   "autoload": {
     "psr-4": {
       "IBG\\": "src"
@@ -17,6 +22,6 @@
     "guzzlehttp/psr7": "^2",
     "slim/twig-view": "3.x-dev",
     "symfony/browser-kit": "5.4.11",
-    "symfony/http-client": "6.0.x-dev"
+    "symfony/http-client": "5.*"
   }
 }

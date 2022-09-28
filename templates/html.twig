@@ -21,6 +21,13 @@
   {{ include('_parts/header.html.twig') }}
 
   <div id="page">
+    {% if messages|length > 0 %}
+    <ul class="system-messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
     {% block content %}{% endblock %}
   </div>
 
