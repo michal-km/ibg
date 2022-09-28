@@ -111,6 +111,7 @@
   }
   #header-hamburger {
       position: absolute;
+      width: auto;
   }
   #header-links {
       text-align: center;

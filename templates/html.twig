@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="plugins/mmenu-light/mmenu-light.css" />
+    <link rel="stylesheet" href="plugins/splide/splide-core.min.css">
+    {% block styles %}{% endblock %}
+    <script src="plugins/lazyload/lazyload.min.js"></script>
+    <script src="plugins/splide/splide.min.js"></script>
+    <script src="plugins/mmenu-light/mmenu-light.js"></script>
+    <script src="js/site.js"></script>
+    {% block scripts %}{% endblock %}
+  </head>
+  
+  <body class="{{ page.classes }}">
+  {{ include('_parts/header.html.twig') }}
+
+  <div id="page">
+    {% block content %}{% endblock %}
+  </div>
+
+  {{ include('_parts/footer.html.twig') }}
+  {{ include('_parts/menu.html.twig') }}
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+    });
+  </script>
+</body>
+</html>

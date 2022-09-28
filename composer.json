@@ -1,0 +1,23 @@
+{
+  "name": "ibg/site",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Michal Kazmierczak",
+      "email": "michal.kazmierczak@oldwestenterprises.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "IBG\\": "src"
+    }
+  },
+  "require": {
+    "slim/slim": "4.*",
+    "guzzlehttp/psr7": "^2",
+    "slim/twig-view": "3.x-dev",
+    "guzzlehttp/guzzle": "7.5.x-dev",
+    "fabpot/goutte": "dev-master",
+    "symfony/browser-kit": "6.1.x-dev"
+  }
+}

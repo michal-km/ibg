@@ -1,0 +1,15 @@
+    <div id="instagram">
+      <h2>Follow us on Instagram</h2>
+      <p class="social-link"><a href="#">@internationalbeautygroup</a></p>    
+      <div id="slider" class="splide">
+        <div class="splide__track">
+          <ul id="items" class="splide__list">
+            {% for edge in instagram.feed %}
+            <li class="block splide__slide">
+              <a href="{{ edge.link }}"><img src="src/_parts/image.php?url={{ edge.image}}" /></a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
