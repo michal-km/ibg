@@ -13,10 +13,12 @@ body {
 a, a:link, a:visited {
   text-decoration: none;
   color: #81185e
+  transition: 0.1s color linear;
  }
 
 a:hover {
- text-decoration: underline;
+ text-decoration: none;
+ color: #a232a8;
 }
 
 img
@@ -25,6 +27,14 @@ img
   max-width: 100%;
   height: auto;
  }
+
+img.hoverable {
+  transition: 0.1s opacity linear;
+}
+
+img.hoverable:hover {
+  opacity: 0.7;
+}
 
 p {
  margin-top: 0em;
@@ -41,7 +51,9 @@ h2 {
   margin-top: 2em;
  }
 
-#page {
+#page,
+#instagram,
+#footer {
   width: 90%;
   max-width: 1772px;
   margin-left: auto;

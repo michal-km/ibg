@@ -6,7 +6,7 @@
           <ul id="items" class="splide__list">
             {% for edge in instagram.feed %}
             <li class="block splide__slide">
-              <a href="{{ edge.link }}"><img src="src/_parts/image.php?url={{ edge.image}}" /></a>
+              <a href="{{ edge.link }}"><img class="hoverable" src="src/_parts/image.php?url={{ edge.image}}" /></a>
             </li>
             {% endfor %}
           </ul>
