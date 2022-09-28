@@ -1,8 +1,13 @@
-#contactform {
+#contactform,
+#auth-login-form {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2em;
+}
+
+#auth-login-form {
+    max-width: 400px;
 }
 
 input,

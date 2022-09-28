@@ -105,5 +105,17 @@ class FrontendController extends Controller {
     ];
     return $view->render($response, 'message-sent.html.twig', $variables);
   }
+
+  public function getLoginPage(Request $request, Response $response, $args) {
+    $view = Twig::fromRequest($request);
+    $variables = $this->getVariables();
+    $variables['page'] = [
+      'title'       => 'International Beauty Group - Login',
+      'description' => '',
+      'classes'     => 'not-front login',
+      'noindex'     => true,
+    ];
+    return $view->render($response, 'login.html.twig', $variables);
+  }
   
 }

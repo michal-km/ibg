@@ -70,4 +70,9 @@ $app->get('/message-sent', function (Request $request, Response $response, $args
   return $controller->getMessageSentPage($request, $response, $args);
 });
 
+$app->get('/login', function (Request $request, Response $response, $args) {
+  $controller = FrontendController::getInstance();
+  return $controller->getLoginPage($request, $response, $args);
+});
+
 $app->run();
