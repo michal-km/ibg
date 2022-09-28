@@ -38,7 +38,7 @@ class ContactFormController extends Controller {
   private function sendMail($name, $surname, $subject, $message, $email) {
     $mail_address = 'sklep@wgrygranie.pl';
     $to      = $mail_address;
-    $message .= "From: ".$name." ".$surname." (".$email.")"."\r\n".$message;
+    $message = "From: ".$name." ".$surname." (".$email.")"."\r\n\r\n".$message;
     $headers = 'From: '.$mail_address."\r\n" .
       'Reply-To: '.$email. "\r\n" .
       'X-Mailer: PHP/' . phpversion();
