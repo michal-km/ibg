@@ -101,6 +101,7 @@ class FrontendController extends Controller {
       'title'       => 'International Beauty Group - Message Sent',
       'description' => '',
       'classes'     => 'not-front message-sent',
+      'noindex'     => true,
     ];
     return $view->render($response, 'message-sent.html.twig', $variables);
   }

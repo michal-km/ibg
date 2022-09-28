@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>{{ page.title }}</title>
+    {%if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
@@ -15,6 +16,7 @@
     <script src="plugins/mmenu-light/mmenu-light.js"></script>
     <script src="js/site.js"></script>
     {% block scripts %}{% endblock %}
+    {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
   </head>
   
   <body class="{{ page.classes }}">
