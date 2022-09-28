@@ -16,8 +16,7 @@
     "slim/slim": "4.*",
     "guzzlehttp/psr7": "^2",
     "slim/twig-view": "3.x-dev",
-    "guzzlehttp/guzzle": "7.5.x-dev",
-    "fabpot/goutte": "dev-master",
-    "symfony/browser-kit": "6.1.x-dev"
+    "symfony/browser-kit": "5.4.11",
+    "symfony/http-client": "6.0.x-dev"
   }
 }
