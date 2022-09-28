@@ -1,10 +1,10 @@
 <?php
-$url = ($_POST['url']) ? $_POST['url'] : $_GET['url'];
-$headers = ($_POST['headers']) ? $_POST['headers'] : $_GET['headers'];
-$mimeType = ($_POST['mimeType']) ? $_POST['mimeType'] : $_GET['mimeType'];
+@$url = ($_POST['url']) ? $_POST['url'] : $_GET['url'];
+@$headers = ($_POST['headers']) ? $_POST['headers'] : $_GET['headers'];
+@$mimeType = ($_POST['mimeType']) ? $_POST['mimeType'] : $_GET['mimeType'];
 $session = curl_init($url);
 
-if ($_POST['url']) {
+if (@$_POST['url']) {
     $postvars = '';
 
     while ($element = current($_POST)) {
