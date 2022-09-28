@@ -30,7 +30,7 @@ class InstalledVersions
     'aliases' => 
     array (
     ),
-    'reference' => 'fa93fcf1013620471bf380ae034370fb2ad1888f',
+    'reference' => 'b79b3292d04da9b5ff4b1ab8cdd3540de133aaa1',
     'name' => 'ibg/site',
   ),
   'versions' => 
@@ -52,7 +52,7 @@ class InstalledVersions
       'aliases' => 
       array (
       ),
-      'reference' => 'fa93fcf1013620471bf380ae034370fb2ad1888f',
+      'reference' => 'b79b3292d04da9b5ff4b1ab8cdd3540de133aaa1',
     ),
     'nikic/fast-route' => 
     array (
@@ -76,16 +76,6 @@ class InstalledVersions
       array (
         0 => '*',
       ),
-    ),
-    'phpmailer/phpmailer' => 
-    array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
-      'aliases' => 
-      array (
-        0 => '9999999-dev',
-      ),
-      'reference' => 'df88e14dba88f711af3dc838eb29089e3684e609',
     ),
     'psr/container' => 
     array (
