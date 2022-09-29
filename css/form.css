@@ -52,6 +52,10 @@ label {
     color: #ffffff;
 }
 
+#auth-login-form .submit {
+    text-align: center;
+}
+
 @media all and (max-width: 1023px) {
     fieldset {
         display: block;
