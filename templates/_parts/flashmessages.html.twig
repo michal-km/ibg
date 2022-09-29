@@ -1,0 +1,7 @@
+    {% if messages|length > 0 %}
+    <ul class="system-messages">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
