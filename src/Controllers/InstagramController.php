@@ -5,7 +5,10 @@ namespace IBG\Controllers;
 use Symfony\Component\BrowserKit\HttpBrowser;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\BrowserKit\CookieJar;
+//use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+//use GuzzleHttp\Client;
 use IBG\Controllers\Controller;
+use Instagram\Api;
 
 class InstagramController extends Controller {
 
@@ -22,6 +25,21 @@ class InstagramController extends Controller {
     }
     return $images;
   }
+
+  /*
+  public function getFeed1() : array {
+    $cachePool = new FilesystemAdapter('Instagram', 0, __DIR__.'/../cache');
+    $client = new Client([
+                         'verify' => false,
+    ]);
+    $api = new Api($cachePool, $client);
+    $api->login('mnowakowski5436@gmail.com', 'OrniCanto24');
+    $profile = $api->getProfile('internationalbeautygroup');
+    $medias = $profile->getMedias();
+    print_r ($medias);
+    exit;
+  }
+  */
   
   public function getFeed() : array {
       //$url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
