@@ -1,12 +1,12 @@
     <div id="instagram">
       <h2>Follow us on Instagram</h2>
-      <p class="social-link"><a href="#">@internationalbeautygroup</a></p>    
+      <p class="social-link"><a href="https://www.instagram.com/internationalbeautygroup/">@internationalbeautygroup</a></p>    
       <div id="slider" class="splide">
         <div class="splide__track">
           <ul id="items" class="splide__list">
             {% for edge in instagram.feed %}
             <li class="block splide__slide">
-              <a href="{{ edge.link }}"><img class="hoverable" src="src/_parts/image.php?url={{ edge.image}}" /></a>
+              <a href="{{ edge.link }}"><img class="hoverable" src="src/_parts/image.php?url={{ edge.image}}" alt=""></a>
             </li>
             {% endfor %}
           </ul>
