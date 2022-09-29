@@ -11,7 +11,10 @@ class FrontendController extends Controller {
 
   protected function getVariables() {
     $variables = [];
-    $variables['messages'] = $_SESSION['site_messages'];
+    $variables['messages'] = [];
+    if (isset($_SESSION['site_messages'])) {
+      $variables['messages'] = $_SESSION['site_messages'];
+    }
     $_SESSION['site_messages'] = [];
     $variables['instagram'] = [
       'feed' => InstagramController::getInstance()->getFeed(),
