@@ -24,8 +24,8 @@ class InstagramController extends Controller {
   }
   
   public function getFeed() : array {
-      //$url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
-      $url = 'https://preview.wgrygranie.pl/js/instatest.json';
+      $url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
+      //$url = 'https://preview.wgrygranie.pl/js/instatest.json';
       $jar = new CookieJar();
       $client = HttpClient::create(
         [
