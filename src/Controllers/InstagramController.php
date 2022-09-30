@@ -5,29 +5,30 @@ namespace IBG\Controllers;
 use Symfony\Component\BrowserKit\HttpBrowser;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\BrowserKit\CookieJar;
-//use Symfony\Component\Cache\Adapter\FilesystemAdapter;
-//use GuzzleHttp\Client;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use GuzzleHttp\Client;
 use IBG\Controllers\Controller;
 use Instagram\Api;
+use Instagram\Model\Media;
 
 class InstagramController extends Controller {
 
-  private function parseGraph($data) {
+  private function parseGraph($graphQL) {
     $images = [];
-    $graphQL = $data->graphql->user->edge_owner_to_timeline_media->edges;
     foreach ($graphQL as $edge) {
-      if ($edge->node->__typename == "GraphImage") {
+  //    if ($edge->getTypeName() == "GraphImage") {
         $images[] = [
-          'image' => rawurlencode($edge->node->display_url),
-          'link'  => 'https://www.instagram.com/p/'.$edge->node->shortcode.'/',
+          'image' => urlencode($edge->getDisplaySrc()),
+          'link'  => 'https://www.instagram.com/p/'.$edge->getShortcode().'/',
         ];
-      }
+   //   }
     }
+  //  print_r ($images);
+  //  exit;
     return $images;
   }
 
-  /*
-  public function getFeed1() : array {
+  public function getFeed() : array {
     $cachePool = new FilesystemAdapter('Instagram', 0, __DIR__.'/../cache');
     $client = new Client([
                          'verify' => false,
@@ -36,12 +37,10 @@ class InstagramController extends Controller {
     $api->login('mnowakowski5436@gmail.com', 'OrniCanto24');
     $profile = $api->getProfile('internationalbeautygroup');
     $medias = $profile->getMedias();
-    print_r ($medias);
-    exit;
+    return $this->parseGraph($medias);
   }
-  */
   
-  public function getFeed() : array {
+  public function getFeed_local() : array {
       //$url = 'https://www.instagram.com/internationalbeautygroup/?__a=1&__d=dis';
       $url = 'https://preview.wgrygranie.pl/js/instatest.json';
       $jar = new CookieJar();
@@ -61,7 +60,17 @@ class InstagramController extends Controller {
       );
       $browser = new HttpBrowser($client, null, $jar);
       $browser->request('GET', $url);
+      $edges = [];
       $data = json_decode($browser->getResponse()->getContent());
-      return $this->parseGraph($data);
+      $data = $data->graphql->user->edge_owner_to_timeline_media->edges;
+      foreach ($data as $edge) {
+        if ($edge->node->__typename == 'GraphImage') {
+          $media = new Media();
+          $media->setDisplaySrc($edge->node->display_url);
+          $media->setShortcode($edge->node->shortcode);
+          $edges[] = $media;
+        }
+      }
+      return $this->parseGraph($edges);
   }
 }

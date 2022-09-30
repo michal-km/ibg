@@ -17,7 +17,7 @@ class FrontendController extends Controller {
     }
     $_SESSION['site_messages'] = [];
     $variables['instagram'] = [
-      'feed' => InstagramController::getInstance()->getFeed(),
+      'feed' => InstagramController::getInstance()->getFeed_local(),
     ];
     return $variables;
   }
