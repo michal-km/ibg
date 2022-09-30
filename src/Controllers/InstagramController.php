@@ -28,13 +28,13 @@ class InstagramController extends Controller {
     return $images;
   }
 
-  public function getFeed() : array {
+  public function getFeed($instaLogin, $instaPass) : array {
     $cachePool = new FilesystemAdapter('Instagram', 0, __DIR__.'/../cache');
     $client = new Client([
                          'verify' => false,
     ]);
     $api = new Api($cachePool, $client);
-    $api->login('mnowakowski5436@gmail.com', 'OrniCanto24');
+    //$api->login($instaLogin, $instaPass);
     $profile = $api->getProfile('internationalbeautygroup');
     $medias = $profile->getMedias();
     return $this->parseGraph($medias);
